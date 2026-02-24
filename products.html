@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products - UPR Home Systems</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/subpage.css">
   <link rel="stylesheet" href="css/products.css">
   <link rel="stylesheet" href="css/components.css">
@@ -11,17 +13,23 @@
 <body>
 
   <!-- HEADER -->
-  <header class="hero-header">
-    <div class="hero-header-content">
-      <!-- Logo fully flush left -->
-      <img src="assets/images/logo.png" alt="UPR Logo" class="hero-logo">
-
-      <!-- Subpage links fully flush top-right -->
-      <nav class="hero-links">
-        <a href="index.html">Home</a>
-        <a href="installations.html">Installations</a>
-        <a href="cart.html">Cart</a>
-      </nav>
+  <header class="header">
+    <div class="header-content">
+      <img src="assets/images/logo.png" alt="UPR Home Systems Logo" class="logo-top-left">
+      <div class="header-left">
+        <div class="header-text">
+          <h1>UPR Home Systems</h1>
+          <p class="slogan">Smart Starts Here</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <img src="assets/images/device.webp" alt="UPR Device" class="device-image">
+      </div>
+    </div>
+    <div class="header-subpages">
+      <a href="index.html">Home</a>
+      <a href="installations.html">Installations</a>
+      <a href="cart.html">Cart</a>
     </div>
   </header>
 
@@ -149,5 +157,6 @@
     </div>
   </main>
 
+  <script src="js/script.js" defer></script>
 </body>
 </html>
