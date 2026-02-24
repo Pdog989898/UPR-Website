@@ -5,22 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UPR Home Systems</title>
 
-  <!-- Google Font: Roboto Condensed -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- TERMS & SERVICES MODAL -->
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <h2>Terms & Services</h2>
+      <p>Please agree to our terms to continue using the website.</p>
+      <button id="agreeBtn">I Agree</button>
+    </div>
+  </div>
 
   <!-- HEADER -->
   <header class="header">
     <div class="header-content">
 
       <!-- LOGO FIXED TOP LEFT -->
-      <img src="images/logo.png" alt="UPR Home Systems Logo" class="logo-top-left">
+      <img src="assets/images/logo.png" alt="UPR Home Systems Logo" class="logo-top-left">
 
-      <!-- HEADER TEXT (NEXT TO LOGO) -->
+      <!-- HEADER TEXT -->
       <div class="header-left">
         <div class="header-text">
           <h1>UPR Home Systems</h1>
@@ -30,16 +39,50 @@
 
       <!-- DEVICE IMAGE (RIGHT) -->
       <div class="header-right">
-        <img src="images/device.webp" alt="UPR Device" class="device-image">
+        <img src="assets/images/device.webp" alt="UPR Device" class="device-image">
       </div>
 
+    </div> <!-- END header-content -->
+
+    <!-- SUBPAGE LINKS TOP RIGHT -->
+    <div class="header-subpages">
+      <a href="installations.html">Installations</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
     </div>
+
   </header>
 
   <!-- MAIN CONTENT -->
   <main class="main">
-    <h2>Our Store Location</h2>
-    <p>Come check out our products in store!</p>
+
+    <!-- ABOUT US / HERO -->
+    <section class="info-section">
+      <h3>About UPR Home Systems</h3>
+      <ul>
+        <li>Providing top-quality home entertainment solutions.</li>
+        <li>Installation guidance and excellent customer service.</li>
+        <li>Smart starts here — experience the best today!</li>
+      </ul>
+    </section>
+
+    <!-- OUR STORE + MAP -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.9881131320267!2d-79.88397042346945!3d43.64841565273974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b12ab77e87029%3A0xb8dd70e361a94c1b!2sUPR%20Home%20Entertainment%20Systems!5e0!3m2!1sen!2sca!4v1768614937478!5m2!1sen!2sca"
+        width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- HOURS -->
+    <section class="info-section">
+      <h3>Hours of Operation</h3>
+      <ul>
+        <li>Monday – Friday: 9am – 6pm</li>
+        <li>Saturday: 10am – 4pm</li>
+        <li>Sunday: Closed</li>
+      </ul>
+    </section>
 
     <!-- SOCIAL BUTTONS -->
     <div class="social-buttons">
@@ -48,27 +91,9 @@
       <a href="https://x.com/UPRhome" target="_blank" class="social-btn xbtn">X</a>
     </div>
 
-    <!-- Map Section -->
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.9881131320267!2d-79.88397042346945!3d43.64841565273974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b12ab77e87029%3A0xb8dd70e361a94c1b!2sUPR%20Home%20Entertainment%20Systems!5e0!3m2!1sen!2sca!4v1768614937478!5m2!1sen!2sca"
-        width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-
-    <!-- INFO SECTION -->
-    <section class="info-section">
-      <h3>More Ways We Serve You</h3>
-      <ul>
-        <li>We take orders over the phone or by email, with delivery straight to your door.</li>
-        <li>Come see how we can help you save money while enjoying top-quality products.</li>
-        <li>Our streaming options give you incredible selection and value.</li>
-        <li>Don’t wait—experience the best in home entertainment today!</li>
-      </ul>
-    </section>
-
   </main>
 
-  <script src="script.js"></script>
+  <!-- JS -->
+  <script src="js/script.js"></script>
 </body>
 </html>

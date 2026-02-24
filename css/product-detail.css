@@ -1,0 +1,73 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.small-header {
+  background: url('../assets/images/Header_background.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 20px 20px;
+  position: relative;
+  color: white;
+}
+
+.small-header button {
+  background: #ff831e;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 8px 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.small-header button:hover {
+  background: #000000;
+}
+
+.main.product-detail-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.product-detail-image img {
+  width: 120%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  position: relative;
+  left: -140px; /* move left */
+}
+
+.product-detail-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.product-detail-info .price {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, 0.685);
+}
+
+.product-detail-info .description {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .main.product-detail-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-detail-image img {
+    max-width: 100%;
+  }
+}
+/* Button styles moved to css/components.css (shared) */

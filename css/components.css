@@ -1,0 +1,54 @@
+/* Shared reusable components */
+
+/* Footer inside cards to align actions */
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* Add to Cart button shared style */
+.add-cart-btn {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.add-cart-btn:hover {
+  background-color: #218838; /* slightly darker green */
+}
+
+.add-cart-btn .cart-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+/* Icon-only variant for listing page buttons */
+.add-cart-btn.icon-only {
+  padding: 6px;
+  width: 40px;
+  justify-content: center;
+}
+
+.add-cart-btn .btn-label {
+  display: inline-block;
+}
+
+.add-cart-btn.icon-only .btn-label {
+  display: none;
+}
+
+/* Ensure responsive behavior: keep layout but allow button to wrap on small screens */
+@media (max-width: 480px) {
+  .card-footer {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,153 @@
+/* RESET DEFAULT STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* HERO HEADER - small for subpages */
+.hero-header {
+  background: url('../assets/images/Header_background.jpg') no-repeat center center;
+  background-size: cover;
+  height: 120px; /* smaller height */
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+}
+
+/* HERO HEADER CONTENT */
+.hero-header-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, links right */
+  height: 100%;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* LOGO LEFT - fully flush & fixed */
+.hero-logo {
+  height: 55px;
+  width: auto;
+  position: fixed; /* stays visible when scrolling */
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1001; /* above header */
+}
+
+/* NAV LINKS TOP-RIGHT - scrolls with page */
+.hero-links {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+  gap: 25px;
+  z-index: 1001;
+}
+
+.hero-links a {
+  color: black;
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.hero-links a:hover {
+  text-decoration: underline;
+}
+
+/* MAIN CONTENT */
+.main {
+  background: white;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 140px; /* give space below fixed logo */
+}
+
+/* PRODUCTS GRID */
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px; /* space between boxes */
+  margin-top: 20px;
+}
+
+/* INDIVIDUAL PRODUCT BOX */
+.product-box {
+  flex: 1 1 calc(33.333% - 30px); /* 3 per row */
+  border: 1px solid #ccc; /* gray border */
+  padding: 15px;
+  background-color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.product-box:hover {
+  transform: scale(1.02);
+}
+
+/* PRODUCT IMAGE */
+.product-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* PRODUCT NAME */
+.product-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+/* PRODUCT PRICE */
+.product-price {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.product-price span {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 1024px) {
+  .product-box {
+    flex: 1 1 calc(50% - 30px); /* 2 per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-logo {
+    height: 45px;
+    top: 5px;
+    left: 0; /* fully flush left on mobile */
+  }
+
+  .hero-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .product-box {
+    flex: 1 1 100%; /* 1 per row on small screens */
+  }
+}
