@@ -8,21 +8,24 @@ const closeModal = document.querySelector(".close-modal");
 
 // Open modal when clicking on product
 function openProductModal(imageSrc, name, price, description) {
+  if (!modal || !modalImage || !modalName || !modalPrice || !modalDescription) return;
   modal.style.display = "flex";
   modalImage.src = imageSrc;
-  modalName.innerHTML = name;
-  modalPrice.innerHTML = price;
-  modalDescription.innerHTML = description;
+  modalName.textContent = name;
+  modalPrice.textContent = price;
+  modalDescription.textContent = description;
 }
 
 // Close modal
-closeModal.onclick = () => {
-  modal.style.display = "none";
-};
+if (closeModal && modal) {
+  closeModal.onclick = () => {
+    modal.style.display = "none";
+  };
+}
 
 // Close modal if clicking outside the content
 window.onclick = (event) => {
-  if (event.target === modal) {
+  if (modal && event.target === modal) {
     modal.style.display = "none";
   }
 };
