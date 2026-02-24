@@ -1,6 +1,6 @@
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
   margin-top: 30px;
 }
@@ -13,6 +13,7 @@
   border-radius: 8px;
   background: white;
   transition: 0.2s;
+  min-width: 0;
 }
 
 .product-card:hover {
@@ -28,11 +29,24 @@
 .product-card h3 {
   margin-top: 10px;
   font-size: 1.2rem;
+  overflow-wrap: anywhere;
 }
 
 .product-card p {
   margin-top: 5px;
   font-size: 1rem;
   color: #666;
+}
+
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
 }
 /* Button styles moved to css/components.css (shared) */
